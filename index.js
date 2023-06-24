@@ -22,9 +22,13 @@ app.get('/', function (req, res) {
 // your first API endpoint...
 app.get('/api/whoami', (req, res) => {
   const ip = req.ip; //obtener ip
+  const idiomas = req.acceptsLanguages('en', 'es');
+  const verBrowser = req.headers['user-agent']; //Va entre corchetes porque el nombre contiene un guión. En javascript cuando querés acceder a la propiedad de un objeto con ese caracter hay que usar corchetes y mandar la propiedad como un STRING.
 
   const responseObject = { //se guarda en un objeto
-    ipaddress: ip
+    ipaddress: ip,
+    language: idiomas,
+    software: verBrowser
   };
 
   res.json(responseObject) //se lo muestra en un json
