@@ -1,15 +1,18 @@
 {
   "name": "request-header-parser-microservice",
   "version": "0.0.2",
-  "description": "API project for freeCodeCamp",
+  "description": "proyecto de freeCodeCamp headerparser para ver la info del usuario",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
     "cors": "^2.8.1",
     "dotenv": "^8.2.0",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1"
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,7 @@
     "url": "https://github.com/freeCodeCamp/freeCodeCamp/issues"
   },
   "homepage": "https://github.com/freeCodeCamp/boilerplate-project-headerparser#readme",
-  "author": "freeCodeCamp <team@freecodecamp.org>",
+  "author": "Lautaro",
   "keywords": [
     "freeCodeCamp",
     "node",
